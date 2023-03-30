@@ -36,3 +36,90 @@
     transform: rotate(360deg);
   }
 }
+
+.heading {
+  padding: 3em;
+  background: linear-gradient(90deg,#dd9cc8,#0f6781);
+  font-family: "Permanent Marker";
+  color: #af0000;
+  margin: 0;
+}
+
+
+
+.App {
+  background: linear-gradient(90deg,#dd9c24,pink);
+}
+
+
+
+p {
+  margin: 1%;
+  font-size: 20px;
+}
+
+#input {
+  text-align: center;
+  border: 2px solid #0f6781;
+  border-radius: 10px;
+  padding: 5px;
+  font-size: 15px;
+  background-color: #e0f8ff;
+}
+
+
+
+
+.box-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1%;
+
+
+
+/* see later -  */
+  overflow-y: scroll;
+  height: 500px;
+}
+
+.box-container div {
+  border-radius: 15px;
+  background-color: #ff725c;
+  width: 350px;
+  height: 500px;
+  margin: 0.7%;
+  transition: transform .3s;
+}
+
+.box-container div:hover {
+  transform: scale(1.05);
+}
+
+/* click effect */
+.box-container div:active{
+  transform: scale(0.95);
+}
+
+
+
+
+
+
+.box-container div p {
+  margin: 10px;
+  margin-top: 20px;
+  font-size: 15px;
+}
+
+.bold {
+  display: block;
+  font-weight: bold;
+  font-size: 25px;
+  margin-top: 30px;
+}
+
+
+img {
+  margin-top: 10px;
+}

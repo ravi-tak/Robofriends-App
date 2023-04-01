@@ -1,0 +1,78 @@
+.main {
+  background: linear-gradient(90deg, #dd9c24, pink);
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+p {
+  font-size: 20px;
+}
+
+#input {
+  text-align: center;
+  border: 2px solid #0f6781;
+  border-radius: 10px;
+  padding: 5px;
+  font-size: 15px;
+  background-color: #e0f8ff;
+}
+
+
+
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1%;
+
+
+
+  /* see later -  */
+  overflow-y: scroll;
+  height: 500px;
+}
+
+.cards-container div {
+  border-radius: 15px;
+  background-color: #ff725c;
+  width: 350px;
+  height: 500px;
+  margin: 0.7%;
+  transition: transform .3s;
+
+  /* shodow effect */
+  box-shadow: 0 4px 8px 5px rgba(0, 0, 0, 0.2);
+}
+
+.cards-container div:hover {
+  transform: scale(1.05);
+}
+
+/* click effect */
+.cards-container div:active {
+  transform: scale(0.95);
+}
+
+
+
+
+
+
+.cards-container div p {
+  margin: 10px;
+  margin-top: 20px;
+  font-size: 15px;
+}
+
+.bold {
+  display: block;
+  font-weight: bold;
+  font-size: 25px;
+  margin-top: 30px;
+}
+
+
+img {
+  margin-top: 10px;
+}

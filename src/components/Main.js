@@ -1,31 +1,36 @@
 import { useEffect, useState } from "react";
 import "./Main.css";
+import axios from "axios";
 
 function Main() {
   const [resData, setResData] = useState([]);
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/users")
-      .then((response) => response.json())
-      .then((data) => {
-        setResData(data);
-        setData(data);
-      });
+    const getResponseData = async () => {
+      try {
+        // respone is an axios promise obj it directly returns the JSON data in the response object
+        // and it different from fetch promise obj because the fetch one dosn't contain json data directly 
+        // we have use response.json() to get json data
+        const response = await axios("https://jsonplaceholder.typicode.com/users");
+        // When using await, it ensures that the code waits for the Promise to resolve
+        // before proceeding to the next lines of code
+        const jsonData = response.data; // Use response.data directly and it waits untill the promise resolved
+        setResData(jsonData);
+        setData(jsonData);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+    getResponseData();
   }, []);
 
   const handler = (event) => {
-    var filterData = resData.filter((item) =>
-      item.name.toLowerCase().includes(event.target.value.toLowerCase())
+    const searchValue = event.target.value.toLowerCase();
+    const filteredData = resData.filter((item) =>
+      item.name.toLowerCase().includes(searchValue)
     );
-    var newData = [];
-    for (let data of filterData) {
-      for (let getData of resData) {
-        if (getData.name.toLowerCase() === data.name.toLowerCase())
-          newData.push(getData);
-      }
-    }
-    return setData(newData);
+    setData(filteredData);
   };
 
   return (
@@ -55,24 +60,3 @@ function Main() {
 }
 
 export default Main;
-
-// For me
-
-// getting data from other file(know more about it)
-// const fetchData = require("../Data.json");
-
-// async function getData() {
-//  try {
-//   const response = await axios('./Data.json');
-//   const data = await response.data;
-//   data.forEach(array => {
-//     name.push(array.name)
-//     email.push(array.email)
-//     userName.push(array.username)
-//   })
-//  } catch (error) {
-//     console.log("Error")
-//  }
-// }
-// getData();
-// console.log(name.length)

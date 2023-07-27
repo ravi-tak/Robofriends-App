@@ -1,5 +1,5 @@
-import "./Main.css";
 import { useEffect, useState } from "react";
+import "./Main.css";
 
 function Main() {
   const [resData, setResData] = useState([]);

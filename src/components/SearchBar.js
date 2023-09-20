@@ -8,7 +8,7 @@ const SearchBar = ({ resData, setData }) => {
   };
 
   return (
-    <div>
+    <div className="search-bar">
       <p>Serach Monster</p>
       <input
         type="search"

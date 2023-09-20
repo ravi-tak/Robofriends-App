@@ -2,10 +2,15 @@
   background: linear-gradient(90deg, #dd9c24, pink);
   padding-top: 1%;
   padding-bottom: 1%;
+  height: inherit;
 }
 
 p {
   font-size: 20px;
+}
+
+.search-bar {
+  padding-bottom: 1rem;
 }
 
 #input {
@@ -17,16 +22,11 @@ p {
   background-color: #e0f8ff;
 }
 
-
-
-
 .cards-container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   margin-top: 1%;
-
-
 
   /* see later -  */
   overflow-y: scroll;
@@ -39,7 +39,8 @@ p {
   width: 350px;
   height: 500px;
   margin: 0.7%;
-  transition: transform .3s;
+  transition: transform 0.3s;
+  margin: 1rem;
 
   /* shodow effect */
   box-shadow: 0 4px 8px 5px rgba(0, 0, 0, 0.2);
@@ -54,11 +55,6 @@ p {
   transform: scale(0.95);
 }
 
-
-
-
-
-
 .cards-container div p {
   margin: 10px;
   margin-top: 20px;
@@ -71,7 +67,6 @@ p {
   font-size: 25px;
   margin-top: 30px;
 }
-
 
 img {
   margin-top: 10px;

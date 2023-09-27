@@ -23,8 +23,7 @@ function App() {
   return (
     <div className="App">
       <Title />
-      {apiData.length > 0 && <Main apiData={apiData} />}
-      {!apiData.length > 0 && <Main apiData={apiData} />}
+      <Main apiData={apiData} />
     </div>
   );
 }

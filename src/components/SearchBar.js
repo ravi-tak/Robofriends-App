@@ -1,7 +1,7 @@
-const SearchBar = ({ resData, setData }) => {
+const SearchBar = ({ apiData, setData }) => {
   const handler = (event) => {
     const searchValue = event.target.value.toLowerCase();
-    const filteredData = resData.filter((item) =>
+    const filteredData = apiData.filter((item) =>
       item.name.toLowerCase().includes(searchValue)
     );
     setData(filteredData);

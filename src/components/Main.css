@@ -2,7 +2,7 @@
   background: linear-gradient(90deg, #dd9c24, pink);
   padding-top: 1%;
   padding-bottom: 1%;
-  height: inherit;
+  height: 100vh;
 }
 
 p {
@@ -30,7 +30,7 @@ p {
 
   /* see later -  */
   overflow-y: scroll;
-  height: 500px;
+  height: 73%;
 }
 
 .cards-container div {

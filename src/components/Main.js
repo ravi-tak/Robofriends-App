@@ -27,7 +27,7 @@ function Main({ apiData }) {
               />
             ))
           ) : (
-            <p>Oops! No Mosnter</p>
+            <p>Oops! No Monster</p>
           )}
         </div>
       )}
